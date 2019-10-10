@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ObserverService } from '../observer.service';
 
 @Component({
   selector: 'app-observer-one',
@@ -10,16 +9,14 @@ export class ObserverOneComponent implements OnInit {
 
   observerData: string;
 
-  constructor(private observerService: ObserverService) { }
+  constructor() { }
 
 
   ngOnInit() {
-    this.observerService.ping.subscribe(data => {
-      this.observerData = data;
-    });
+    // Code is missing
   }
 
   triggerObserver() {
-    this.observerService.propagateData();
+    // Code is missing
   }
 }
