@@ -4,15 +4,9 @@ import { ParentaComponent } from './parenta/parenta.component';
 import { ParentbComponent } from './parentb/parentb.component';
 
 
+// add the needed routing configuration
 const routes: Routes = [
-  {
-    path: 'parenta',
-    component: ParentaComponent
-  },
-  {
-    path: 'parentb',
-    component: ParentbComponent
-  }
+
 ];
 
 @NgModule({
