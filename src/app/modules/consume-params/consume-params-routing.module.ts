@@ -4,10 +4,6 @@ import { ConsumeParamsComponent } from './consume-params/consume-params.componen
 
 
 const routes: Routes = [
-  {
-    path: 'consume-params/:id',
-    component: ConsumeParamsComponent
-  }
 ];
 
 @NgModule({
