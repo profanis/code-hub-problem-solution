@@ -1,28 +1,15 @@
-$font-stack:    Helvetica, sans-serif;
-$primary-color: #333;
-
-@mixin upercase() {
-  text-transform: uppercase;
-}
-
-@mixin box($color) {
-  border: 2px solid $color;
-  margin: 20px;
-  padding: 20px;
-  text-align: center;
-}
-
 
 .parent {
 
-  font: 100% $font-stack;
-  color: $primary-color;
+  font: 100% 'Helvetica, sans-serif';
 
-  @include upercase();
-  @include box(red);
+  border: 2px solid red;
+  margin: 20px;
+  padding: 20px;
+  text-align: center;
 
 
   .child {
-    @include box(green);
+
   }
 }
