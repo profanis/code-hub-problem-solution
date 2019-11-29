@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl } from '@angular/forms';
+import { FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-basic-form',
@@ -12,10 +12,7 @@ export class BasicFormComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.form = new FormGroup({
-      firstName: new FormControl(),
-      lastName: new FormControl()
-    })
+
   }
 
 }
