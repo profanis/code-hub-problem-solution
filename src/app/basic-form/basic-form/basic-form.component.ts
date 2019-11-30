@@ -13,11 +13,11 @@ export class BasicFormComponent {
   model: Partial<CustomerModel> = {}
 
   capitalize($event: string) {
-    this.model.firstName = $event.toUpperCase();
+
   }
 
   submitForm(form: NgForm) {
-    console.log(form.value)
+
   }
 
 }

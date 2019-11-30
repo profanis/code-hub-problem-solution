@@ -6,13 +6,7 @@
     <input  type="text"
             class="form-control"
             id="firstNameInput"
-            placeholder="Enter first name"
-            minlength="3"
-            required
-            (ngModelChange)="capitalize($event)"
-            name="firstName"
-            #firstName='ngModel'
-            [ngModel]="model.firstName">
+            placeholder="Enter first name">
 
     <div *ngIf="firstName.invalid && firstName.dirty" class="text-danger">
       Field is required
@@ -26,14 +20,8 @@
     <input  type="text"
             class="form-control"
             id="lastNameInput"
-            placeholder="Enter last name"
-            required
-            name="lastName"
-            #lastName='ngModel'
-            [(ngModel)]="model.lastName">
-    <div *ngIf="lastName.invalid && lastName.dirty" class="text-danger">
-      Field is required
-    </div>
+            placeholder="Enter last name">
+
   </div>
 
   <!-- /Last name -->
@@ -41,11 +29,7 @@
   <!-- is experienced -->
   <div class="form-group form-check">
     <input  class="form-check-input"
-            type="checkbox"
-            name="isExperienced"
-            required
-            #isExperienced='ngModel'
-            [(ngModel)]="model.isExperienced">
+            type="checkbox">
     <label class="form-check-label">I have experience > 2 yrs </label>
   </div>
   <!-- /is experienced -->
@@ -57,11 +41,7 @@
       <input  class="form-check-input"
               type="radio"
               value="1"
-              id="angularjs"
-              required
-              name='angular'
-              #angular='ngModel'
-              [(ngModel)]="model.angular">
+              id="angularjs">
       <label class="form-check-label" for="angularjs">angularJs</label>
     </div>
 
@@ -69,36 +49,22 @@
       <input  class="form-check-input"
               type="radio"
               value="2"
-              id="angular"
-              required
-              name='angular'
-              #angular='ngModel'
-              [(ngModel)]="model.angular">
+              id="angular">
       <label class="form-check-label" for="angular">angular</label>
     </div>
 
-    <div *ngIf="angular.invalid && angular.dirty" class="text-danger">
-      Field is required
-    </div>
   </div>
   <!-- /Angular preferene -->
 
   <!-- Favourite language -->
   <div class="form-group">
     <label class="form-control-label">Favourite Language</label>
-    <select class="form-control"
-            required
-            #favouriteLanguage='ngModel'
-            name="favouriteLanguage"
-            [(ngModel)]="model.favouriteLanguage">
+    <select class="form-control">
       <option [ngValue]="null">Select</option>
       <option *ngFor="let lang of programmingLanguages" [ngValue]="lang">
         {{lang}}
       </option>
     </select>
-    <div *ngIf="favouriteLanguage.invalid && favouriteLanguage.dirty" class="text-danger">
-      Field is required
-    </div>
   </div>
   <!-- /Favourite language -->
 
@@ -106,16 +72,9 @@
   <div class="form-group">
     <label>JS Version</label>
     <input  class="form-control"
-            type="text"
-            required
-            [(ngModel)]="model.jsVersion"
-            name="jsVersion"
-            #jsVersion="ngModel">
-    <div *ngIf="jsVersion.invalid && jsVersion.dirty" class="text-danger">
-      Field is required
-    </div>
+            type="text">
   </div>
   <!-- /JS Version -->
 
-  <button class="btn btn-primary" [disabled]="!form.valid">Submit</button>
+  <button class="btn btn-primary">Submit</button>
 </form>
