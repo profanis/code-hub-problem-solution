@@ -10,7 +10,6 @@ import { StructuralDirectivesModule } from './structural-directives/structural-d
   ],
   imports: [
     BrowserModule,
-    StructuralDirectivesModule
   ],
   providers: [],
   bootstrap: [AppComponent]

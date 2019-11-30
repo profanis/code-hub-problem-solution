@@ -8,7 +8,6 @@ import { ForLoopComponent } from './for-loop/for-loop.component';
   declarations: [ForLoopComponent],
   imports: [
     CommonModule
-  ],
-  exports: [ForLoopComponent]
+  ]
 })
 export class StructuralDirectivesModule { }
