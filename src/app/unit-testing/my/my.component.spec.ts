@@ -30,22 +30,6 @@ describe('MyComponent', () => {
   });
 
   it('Form is valid', () => {
-    const firstNameControl = component.form.get('firstName');
-    const lastNameControl = component.form.get('lastName');
-    const emailControl = component.form.get('email');
-    const passwordControl = component.form.get('password');
-
-    firstNameControl.setValue('fanis');
-    expect(firstNameControl.valid).toBeTruthy();
-
-    lastNameControl.setValue('prodromou');
-    expect(lastNameControl.valid).toBeTruthy();
-
-    emailControl.setValue('prodromouf@gmail.com');
-    expect(emailControl.valid).toBeTruthy();
-
-    passwordControl.setValue('secretpass');
-    expect(passwordControl.valid).toBeTruthy();
 
     expect(component.form.valid).toBeTruthy();
   });

@@ -15,12 +15,7 @@ export class MyComponent implements OnInit {
   }
 
   private buildForm() {
-    this.form = new FormGroup({
-      firstName: new FormControl(null, [Validators.required, Validators.minLength(3)]),
-      lastName: new FormControl(null, [Validators.required, Validators.minLength(3)]),
-      email: new FormControl(null, [Validators.required, Validators.email]),
-      password: new FormControl(null, [Validators.minLength(3), Validators.maxLength(10)]),
-    });
+    // Build your form here
   }
 
 }
