@@ -7,8 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ParentComponent {
 
+  selectedItem: any;
+
   getItems() {
     return [...Array(10).keys()].map(it => ({id: it, name: `item ${it}`}));
+  }
+
+  selectItem(item) {
+    this.selectedItem = item;
   }
 
 }

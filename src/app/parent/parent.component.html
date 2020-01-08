@@ -1,9 +1,11 @@
 <div class="card">
   <div class="card-body">
-    <ul class="list-group">
-      <li class="list-group-item" *ngFor="let item of getItems()">
-        <app-child [item]="item"></app-child>
-      </li>
-    </ul>
+    {{selectedItem.name}}
   </div>
 </div>
+
+<ul class="list-group">
+  <li class="list-group-item" *ngFor="let item of getItems()">
+    <app-child [item]="item" (itemSelect)="selectItem($event)"></app-child>
+  </li>
+</ul>
