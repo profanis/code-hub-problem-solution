@@ -6,5 +6,4 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./child.component.scss']
 })
 export class ChildComponent {
-  @Input() item: any;
 }

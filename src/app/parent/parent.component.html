@@ -2,7 +2,7 @@
   <div class="card-body">
     <ul class="list-group">
       <li class="list-group-item" *ngFor="let item of getItems()">
-        <app-child [item]="item"></app-child>
+        {{item.name}}
       </li>
     </ul>
   </div>
