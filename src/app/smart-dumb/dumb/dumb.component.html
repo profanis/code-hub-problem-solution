@@ -1,0 +1,12 @@
+
+<div class="card mb-5">
+  <div class="card-body">
+    <ng-container *ngIf="product; else selectProduct">
+      <div class="text-success">Product {{product.id}}, {{product.name}}, is selected</div>
+    </ng-container>
+
+    <ng-template #selectProduct>
+      <div class="text-danger">Select a product from the list</div>
+    </ng-template>
+  </div>
+</div>
