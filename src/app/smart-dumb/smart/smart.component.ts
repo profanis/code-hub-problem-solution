@@ -10,16 +10,11 @@ import { ProdcutModel } from '../product.model';
 export class SmartComponent implements OnInit {
 
   products: ProdcutModel[];
-  selectedProduct: ProdcutModel;
 
   constructor(private productService: ProductsService) { }
 
   ngOnInit() {
     this.products = this.productService.getProducts();
-  }
-
-  selectProduct(product: ProdcutModel) {
-    this.selectedProduct = product;
   }
 
 }

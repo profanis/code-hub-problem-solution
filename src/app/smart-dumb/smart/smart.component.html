@@ -1,7 +1,5 @@
-<app-dumb [product]="selectedProduct"></app-dumb>
-
 <ul class="list-group">
-  <li class="list-group-item" *ngFor="let product of products" (click)="selectProduct(product)">
+  <li class="list-group-item" *ngFor="let product of products">
     {{product.id}} - {{product.name}}
   </li>
 </ul>

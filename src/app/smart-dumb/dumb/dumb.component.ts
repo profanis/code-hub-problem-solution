@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component } from '@angular/core';
 import { ProdcutModel } from '../product.model';
 
 @Component({
@@ -8,6 +8,6 @@ import { ProdcutModel } from '../product.model';
 })
 export class DumbComponent {
 
-  @Input() product: ProdcutModel;
+  product: ProdcutModel;
 
 }
