@@ -6,6 +6,6 @@
 
 <ul class="list-group">
   <li class="list-group-item" *ngFor="let item of getItems()">
-    <app-child [item]="item" (itemSelect)="selectItem($event)"></app-child>
+    <app-child [item]="item"></app-child>
   </li>
 </ul>

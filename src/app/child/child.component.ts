@@ -7,9 +7,8 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 })
 export class ChildComponent {
   @Input() item: any;
-  @Output() itemSelect = new EventEmitter();
 
   select() {
-    this.itemSelect.emit(this.item);
+    // use this method as the item click handler
   }
 }
