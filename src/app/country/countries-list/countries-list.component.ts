@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
 import { CountryModel } from '../country.model';
 
 @Component({
@@ -10,10 +9,10 @@ import { CountryModel } from '../country.model';
 export class CountriesListComponent implements OnInit {
   countries: CountryModel[];
 
-  constructor(private route: ActivatedRoute) { }
+  constructor() { }
 
   ngOnInit() {
-    this.countries = this.route.snapshot.data.countries;
+    // this.countries = ??
   }
 
 }
