@@ -11,9 +11,6 @@ export class IsFormValidGuard implements CanDeactivate<BaseComponent> {
                 currentState: RouterStateSnapshot, nextState?: RouterStateSnapshot): boolean | UrlTree
                                                                                     | Observable<boolean | UrlTree>
                                                                                     | Promise<boolean | UrlTree> {
-    if (!component.canDeactivate()) {
-      return window.confirm('Are you sure you want to leave the page?');
-    }
     return true;
   }
 
