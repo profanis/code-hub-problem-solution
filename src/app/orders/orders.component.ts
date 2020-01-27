@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { OrdersService } from '../orders.service';
-import { OrderModel, ProductModel } from './order.model';
-import { map, take, first } from 'rxjs/operators';
+import { OrderModel } from './order.model';
 import { Observable } from 'rxjs';
 
 @Component({
@@ -12,19 +10,10 @@ import { Observable } from 'rxjs';
 export class OrdersComponent implements OnInit {
   foundOrder$: Observable<OrderModel>;
 
-  constructor(private ordersService: OrdersService) { }
+  constructor() { }
   
   ngOnInit() {
-
-    const byUser = (user: string) => (order: OrderModel) => order.user === user;
-    const byPrice = (price: number) => (product: ProductModel) => product.price >= price;
-    
-    this.foundOrder$ =  this.ordersService.getOrders().pipe(
-      map((orders: OrderModel[]) =>  orders.find(byUser('User1'))),
-      map((order: OrderModel) =>  {
-        return {...order, products: order.products.filter(byPrice(70))};
-      })
-    );
+    // this.foundOrder$ =  ??
   }
 
 }
