@@ -1,0 +1,8 @@
+<div *ngIf="(foundOrder$ | async) as order">
+    <p>user: {{ order.user }}</p>
+    <ul>
+        <li *ngFor="let product of order.products">
+            {{product.name}} - {{product.price}}
+        </li>
+    </ul>
+</div>
