@@ -5,8 +5,8 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class TextTransformPipe implements PipeTransform {
 
-  transform(value: string, args: string): any {
-    return args === 'lower' ? value.toLowerCase() : value.toUpperCase();
+  transform(value: string): any {
+    return value.toUpperCase();
   }
 
 }
