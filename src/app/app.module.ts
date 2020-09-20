@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { PipesModule } from './pipes/pipes/pipes.module';
+import { PipesModule } from './pipes/pipes.module';
 
 @NgModule({
   declarations: [
