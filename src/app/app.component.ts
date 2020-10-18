@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MyService } from './my.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'code-hub-problem-solution';
+
+  constructor(service: MyService) {
+    console.log(service.myItems());
+  }
 }
