@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { NameService } from './name.service';
 
 @Component({
   selector: 'app-root',
@@ -10,11 +11,14 @@ export class AppComponent implements OnInit {
   title = 'code-hub-problem-solution';
   formGroup: FormGroup;
 
-  constructor() {
+  constructor(private service: NameService) {
     this.formGroup = new FormGroup({
-      fullName: new FormControl('')
+      fullName: new FormControl('Martha')
     });
   }
   ngOnInit(): void {
+    this.service.getName().subscribe(result => {
+      this.formGroup.get('fullName').setValue(result.first + ' - ' + result.last);
+    });
   }
 }
