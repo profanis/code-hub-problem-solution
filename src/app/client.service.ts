@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { from, Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -8,8 +8,8 @@ export class ClientService {
 
   constructor() { }
 
-  getClient(): Observable<Client> {
-    return from([
+  getClient(): Observable<Client[]> {
+    const clients: Client[] = [
       {
         name: 'John',
         surname: 'Doe',
@@ -20,7 +20,8 @@ export class ClientService {
         surname: 'Jones',
         isActive: false
       }
-    ]);
+    ];
+    return of(clients);
   }
 }
 
