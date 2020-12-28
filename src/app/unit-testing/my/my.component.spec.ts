@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { MyComponent } from './my.component';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -7,7 +7,7 @@ describe('MyComponent', () => {
   let component: MyComponent;
   let fixture: ComponentFixture<MyComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ MyComponent ],
       imports: [ReactiveFormsModule]
@@ -35,16 +35,16 @@ describe('MyComponent', () => {
     const emailControl = component.form.get('email');
     const passwordControl = component.form.get('password');
 
-    firstNameControl.setValue('fanis');
+    firstNameControl.setValue('John');
     expect(firstNameControl.valid).toBeTruthy();
 
-    lastNameControl.setValue('prodromou');
+    lastNameControl.setValue('Doe');
     expect(lastNameControl.valid).toBeTruthy();
 
-    emailControl.setValue('prodromouf@gmail.com');
+    emailControl.setValue('john@company.com');
     expect(emailControl.valid).toBeTruthy();
 
-    passwordControl.setValue('secretpass');
+    passwordControl.setValue('pass');
     expect(passwordControl.valid).toBeTruthy();
 
     expect(component.form.valid).toBeTruthy();
